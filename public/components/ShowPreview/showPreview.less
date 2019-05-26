@@ -1,0 +1,58 @@
+.preview {
+  --default-preview-width: 300px;
+  --image-max-size: 150px;
+
+  // Position
+  display: flex;
+  align-items: center;
+
+  // Size
+  flex: 1 0 var(--default-preview-width);
+
+  // Style
+  border: 1px solid black;
+
+  // Spacing
+  margin: 0 var(--med-space) var(--lrg-space) var(--med-space);
+
+  &:hover {
+    // Style
+    cursor: pointer;
+    box-shadow: 0 0 5px black;
+  }
+
+  &-image {
+    // Size
+    flex: 0 0 var(--image-max-size);
+    height: var(--image-max-size);
+
+    // Style
+    object-fit: cover;
+    border-right: 1px solid black;
+  }
+
+  &-default {
+    // Display
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Size
+    flex: 0 0 var(--image-max-size);
+    height: var(--image-max-size);
+    
+    // Style
+    border-right: 1px solid black;
+  }
+
+  &-no-image {
+    // Font
+    font-size: 36px;
+    text-align: center;
+  }
+
+  &-text {
+    // Spacing
+    padding: 0 var(--med-space);
+  }
+}

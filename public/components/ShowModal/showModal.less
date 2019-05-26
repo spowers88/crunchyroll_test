@@ -1,0 +1,54 @@
+.showModal {
+  // Display
+  top: 0;
+  left: 0;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+
+  // Size
+  width: 100vw;
+  height: 100vh;
+
+  // Style
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .show {
+    --footer-height: 45px;
+
+    &-poster {
+      // Size
+      max-width: 100vw;
+      max-height: calc(100vh - var(--footer-height));
+
+      // Style
+      object-fit: contain;
+    }
+    &-unavailable {
+      // Spacing
+      padding: var(--lrg-space);
+
+      // Font
+      font-size: 30px;
+
+      // Style
+      background-color: white;
+    }
+    &-footer {
+      // Display
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-close {
+        // Spacing
+        margin: var(--med-space) 0;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
