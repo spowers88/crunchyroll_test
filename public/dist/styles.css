@@ -1,0 +1,115 @@
+.showModal {
+  top: 0;
+  left: 0;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.showModal .show {
+  --footer-height: 45px;
+}
+.showModal .show-poster {
+  max-width: 100vw;
+  max-height: calc(100vh - var(--footer-height));
+  object-fit: contain;
+}
+.showModal .show-unavailable {
+  padding: var(--lrg-space);
+  font-size: 30px;
+  background-color: white;
+}
+.showModal .show-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showModal .show-footer-close {
+  margin: var(--med-space) 0;
+}
+.showModal .show-footer-close:hover {
+  cursor: pointer;
+}
+
+.preview {
+  --default-preview-width: 300px;
+  --image-max-size: 150px;
+  display: flex;
+  align-items: center;
+  flex: 1 0 var(--default-preview-width);
+  border: 1px solid black;
+  margin: 0 var(--med-space) var(--lrg-space) var(--med-space);
+}
+.preview:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px black;
+}
+.preview-image {
+  flex: 0 0 var(--image-max-size);
+  height: var(--image-max-size);
+  object-fit: cover;
+  border-right: 1px solid black;
+}
+.preview-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 var(--image-max-size);
+  height: var(--image-max-size);
+  border-right: 1px solid black;
+}
+.preview-no-image {
+  font-size: 36px;
+  text-align: center;
+}
+.preview-text {
+  padding: 0 var(--med-space);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content .header {
+  display: flex;
+  padding: var(--lrg-space);
+  border-bottom: 1px solid black;
+}
+.content .header-search {
+  flex: 1 1 100%;
+  font-size: 20px;
+  line-height: 30px;
+  border: none;
+}
+.content .header-search:focus {
+  outline: none;
+  border-bottom: 1px solid grey;
+}
+.content .header-clear {
+  border: none;
+  background-color: white;
+}
+.content .header-clear:hover {
+  cursor: pointer;
+}
+.content .header-clear:focus {
+  outline: none;
+}
+.content .showList {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: var(--xlrg-space) 0;
+}
+.content .showList .loader,
+.content .showList .noResults {
+  display: inline-block;
+  font-size: 30px;
+  margin: auto;
+}
+
+
+/*# sourceMappingURL=styles.css.map*/
